@@ -1,0 +1,16 @@
+h1
+  | Удаленные счета
+- if @deleted_bank_accounts
+  - @deleted_bank_accounts.each do |account|
+    .card.mb-3
+      .card-body
+        p.card-text
+        |  Номер счета:
+        = account.account_number
+      p.card-text
+        |  Тип счета: 
+        = account.account_type
+      p.card-text
+        |  Баланс: 
+        = account.balance
+      = link_to "Восстановить",   restore_client_bank_accounts_path(client_id: current_client.id, id: account.id), method: :put, class: "btn btn-primary"

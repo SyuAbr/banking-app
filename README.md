@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Банкосвское приложение
 
-Things you may want to cover:
+Создайте переменные окружения
+   Установите переменные окружения `PG_USERNAME` и `PG_PASSWORD` со значениями вашего имени пользователя и пароля от PostgreSQL.
 
-* Ruby version
+Установите гемы для работы приложения
+   Выполните команду `bundle install` 
 
-* System dependencies
+Установите зависимости JavaScript
+   Выполните команду `yarn install` 
 
-* Configuration
+Создайте базу данных
+   Выполните команду `rails db:create` для создания базы данных и `rails db:migrate` для её миграции
 
-* Database creation
+Запустите сервер
+   Выполните команду `rails server`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

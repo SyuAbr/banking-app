@@ -1,0 +1,35 @@
+.container
+  .row
+    .col-md-6.offset-md-3
+      h1.text-end.mb-4.border-bottom.pb-2
+        = @client.name
+        p Номер телефона: #{@client.phone_number}
+        = link_to 'Выйти', logout_path, method: :delete, class: "btn btn-primary float-end mx-2 my-2", data: { confirm: 'Вы уверены, что хотите выйти?' }
+      h2.mb-4
+        | Счета и накопления:
+      - if @bank_accounts.empty?
+        p
+          | У вас пока нет счетов
+      - else
+        - @bank_accounts.each do |account|
+          .card.mb-3
+            .card-body
+              p.card-text
+                | Номер счета:
+                = account.account_number
+              p.card-text
+                | Тип счета:
+                = account.account_type
+              p.card-text
+                | Баланс:
+                = account.balance
+              hr
+              = link_to "Редактировать", edit_client_bank_account_path(client_id: @client.id, id: account.id), class: "btn btn-primary px-3", style: "background-color: blue"
+              = link_to "Удалить", destroy_client_bank_account_path(client_id: @client.id,id: account.id),data: { confirm: "Вы уверены?" }, class: "btn btn-primary px-3", style: "color: blue; background-color: white; border: 1px solid blue"
+              hr
+              = link_to "Подробнее о счёте", more_client_bank_account_path(client_id: @client.id, id: account.id), class: "btn btn-primary  px-3", style: "background-color: blue"
+      .text-center.mt-5
+          .col-sm
+            = link_to 'Добавить счёт?', new_client_bank_account_path(client_id: @client.id), class: "btn btn-primary btn-lg btn-block px-4", style: "background-color: blue"
+          .col-sm
+            = link_to 'Показать удаленные счета', deleted_client_bank_accounts_path(client_id: @client.id), class: "btn btn-outline-primary btn-lg btn-block px-4", style: "color: blue; border-color: blue;"

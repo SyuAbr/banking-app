@@ -1,0 +1,6 @@
+h1.text-center.mb-4
+  | Выберите тип операции
+.text-center
+  = link_to 'Снятие', withdrawal_bank_account_transactions_path(@bank_account), class: "btn btn-primary btn-lg px-4", style: "background-color: blue; margin-right: 20px;"
+  = link_to 'Перевод по номеру счета', transfer_account_bank_account_transactions_path(@bank_account), class: "btn btn-primary btn-lg px-4", style: "background-color: blue; margin-right: 20px;"
+  = link_to 'Перевод по номеру телефона', transfer_phone_bank_account_transactions_path(@bank_account), class: "btn btn-primary btn-lg px-4", style: "background-color: blue; margin-right: 20px;"

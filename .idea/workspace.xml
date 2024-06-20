@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e449c306-61a6-4827-a766-0eed1c552623" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/bank_accounts_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/confirmations_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/omniauth_callbacks_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/passwords_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/registrations_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/sessions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients/unlocks_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clients_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/decorators/transaction_decorator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/mailers/password_reset_mailer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/ability.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/bank_account.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/client.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/transaction.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/create.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/deleted.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/destroy.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/more.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/bank_accounts/update.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/create.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/destroy.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/login.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/password/edit.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/password/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/registrations/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/sessions/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clients/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/shared/_error_messages.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/password_reset_mailer/reset_email.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/create.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/new.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/new_withdrawal.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/transfer_account.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/transfer_by_account_number.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/transfer_by_phone_number.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/transfer_phone.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/withdrawal.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bundle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/kaminari_config.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240513144535_create_clients.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240514204507_create_bank_accounts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240514211821_create_transactions.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240514211855_create_bills.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240524204841_add_devise_to_clients.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240525120341_add_bank_account_id_to_transactions.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240525192357_add_password_reset_token_and_password_reset_token_sent_at_to_client.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240525230326_add_deleted_at_to_bank_accounts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/bank_accounts_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/bill_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/clients_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/transaction_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/bank_accounts.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/bills.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/clients.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/transactions.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/bank_account_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/bill_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/client_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/transaction_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/banking-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/banking-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channels/application_cable/connection_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/channels/application_cable/connection_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hSIjU849fKZediuwjfC2kna6to" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Rails.banking-app">
+    <configuration name="banking-app" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="banking-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: banking-app" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="banking-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: banking-app" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="banking-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e449c306-61a6-4827-a766-0eed1c552623" name="Changes" comment="" />
+      <created>1717581188355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717581188355</updated>
+      <workItem from="1717581192270" duration="166000" />
+      <workItem from="1718889628238" duration="905000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

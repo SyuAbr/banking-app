@@ -1,0 +1,14 @@
+.container-sm
+  .px-4.pt-5.my-5.text-center.border-bottom
+    h1.h3.mb-3.fw-normal
+     | Вход
+    = form_with(model: @client, url: login_path) do |form|
+      .form-floating.mb-3
+        = form.email_field :email, class: "form-control", id: "floatingInput"
+        label[for="floatingInput"]
+          | Ваш email
+        .form-floating.mb-3
+          = form.password_field :password, class: "form-control", id: "floatingPassword"
+          label[for="floatingPassword"]
+            | Пароль
+        = form.submit 'Войти', class: "btn btn-primary w-100 py-2"

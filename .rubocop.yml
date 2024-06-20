@@ -1,0 +1,22 @@
+require:
+  - rubocop-rails
+AllCops:
+  Exclude:
+      - db/migrate/**/*
+      - db/schema.rb
+      - config/**/*
+      - script/**/*
+      - bin/**/*
+      - node_modules/**/*
+      - Gemfile
+      - Rakefile
+      - config.ru
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/ClassLength:
+    Enabled: false

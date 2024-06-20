@@ -1,0 +1,49 @@
+.container
+  .row
+    .col-md-6.offset-md-3
+      h1.text-end.mb-4.border-bottom.pb-2
+        =  current_client.name
+      h2.mb-4
+        | Информация о счете:
+      .card.mb-3
+        .card-body
+          p.card-text
+            | Номер счета:
+            = @bank_account.account_number
+          p.card-text
+            | Тип счета:
+            = @bank_account.account_type
+          p.card-text
+            | Баланс:
+            = @bank_account.balance
+          hr
+          h2.mb-4
+            | Последние операции:
+          - if @bank_account.transactions.any?
+            table.table
+              thead
+                tr
+                  th
+                    | Сумма
+                  th
+                    | Тип операции
+                  th
+                    | Дата и время
+              tbody
+                - @bank_account.transactions.last(5).each do |transaction|
+                  - transaction = transaction.decorate
+                  tr
+                    td
+                      = transaction.formatted_amount
+                    td
+                      = transaction.transaction_type
+                    td
+                      = transaction.formatted_date
+
+          - else
+            p
+              | На этом счете еще не было операций.
+          = link_to 'Добавить операцию', new_bank_account_transaction_path(@bank_account), class: "btn btn-primary btn-lg px-4 mr-3", style: "background-color: blue"
+          = link_to 'История операций', bank_account_transactions_path(@bank_account), class: "btn btn-lg px-4 ,ml-3", style: "background-color: white; color: blue; border-color: blue;"
+      .text-center.mt-5
+        = link_to 'Назад к списку счетов', client_path(current_client), class: "btn btn-primary btn-lg px-4", style: "background-color: blue"

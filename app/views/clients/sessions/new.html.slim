@@ -1,0 +1,17 @@
+.container-sm
+  .px-4.pt-5.my-5.text-center.border-bottom
+    h1.h3.mb-3.fw-normal
+      | Вход
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-floating.mb-3
+        = f.label :email, "Ваш email", class: 'form-label'
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'floatingInput'
+      .form-floating.mb-3
+        = f.label :password, "Пароль", class: 'form-label'
+        = f.password_field :password, autocomplete: "current-password", class: 'form-control', id: 'floatingPassword'
+      - if devise_mapping.rememberable?
+        .form-floating.mb-3
+          = f.check_box :remember_me
+          = f.label :remember_me
+      = f.submit 'Войти', class: "btn btn-primary w-100 py-2"
+= render "devise/shared/links"

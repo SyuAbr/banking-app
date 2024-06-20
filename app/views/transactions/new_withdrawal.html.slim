@@ -1,0 +1,14 @@
+.container.mt-5
+  h1.text-center.mb-4
+    | Снятие денег
+  .row.justify-content-center
+    .col-md-6
+      = form_with(model: @transaction, url:  withdrawal_bank_account_transactions_path(@bank_account), method: :post, local: true, html: { class: 'text-center' }) do |form|
+        .field.mb-3
+          = form.label :Сумма, class: 'h4'
+          = form.number_field :amount, class: 'form-control form-control-lg'
+        .actions
+          = form.submit 'Снять деньги', class: "btn btn-primary btn-lg px-4 mt-3"
+
+.text-center.mt-4
+  = link_to 'Вернуться к операциям', new_bank_account_transaction_path, class: "btn btn-primary btn-lg px-4", style: "background-color: blue;"

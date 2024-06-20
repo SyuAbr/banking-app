@@ -1,0 +1,15 @@
+image: ruby:3.0.2
+
+before_script:
+  - apt update -qq 
+  - gem install bundler --no-document
+  - bundle install
+
+stages:
+  - lint
+
+ruby_linter_job:
+  stage: lint
+
+  script:
+    - bundle exec rubocop

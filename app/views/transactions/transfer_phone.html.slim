@@ -1,0 +1,24 @@
+.container.mt-5
+  h1.text-center.mb-4
+    | Перевод
+  .row.justify-content-center
+    .col-md-6
+      = form_with(model: @transaction, url: transfer_by_phone_number_bank_account_transactions_path(@bank_account), method: :post, local: true, html: { class: 'text-center' }) do |form|
+        - if @transaction.errors.any?
+          .alert.alert-danger
+            ul
+              - @transaction.errors.full_messages.each do |message|
+                li = message
+
+        = form.hidden_field :transaction_type, value: 'Перевод'
+        .field.mb-3
+          = form.label :amount, 'Сумма', class: 'h4'
+          = form.number_field :amount, class: 'form-control form-control-lg'
+        .field.mb-3
+          = form.label :recipient_number_phone, 'Номер телефона', class: 'h4'
+          = form.text_field :recipient_number_phone, class: 'form-control form-control-lg'
+        .actions
+          = form.submit 'Перевести деньги', class: "btn btn-primary btn-lg px-4 mt-3"
+
+.text-center.mt-4
+  = link_to 'Вернуться к операциям', :back, class: "btn btn-primary btn-lg px-4", style: "background-color: blue;"
