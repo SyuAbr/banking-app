@@ -47,8 +47,10 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem 'rubocop'
+  gem 'foreman'
   gem 'rubocop-rails', '~> 2.2', require: false
 end
+gem 'jsbundling-rails'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -68,9 +70,6 @@ group :test do
 end
 
 gem "pg", "~> 1.5"
-
-gem 'html2slim'
-
 gem 'slim-rails'
 gem "devise", "~> 4.9"
 gem "paranoia", "~> 2.6.3"

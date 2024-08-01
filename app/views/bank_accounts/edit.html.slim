@@ -1,8 +1,8 @@
 h1
   | Редактирование счета
-= form_for [current_client, @bank_account] do |f|
+= form_for [@client, @bank_account] do |f|
   .form-group
     = f.label :account_type
     = f.select :account_type, options_for_select(['Расчетный','Кредитный','Депозитный', 'Бюджетный']), {}, class: 'form-control'
-  = f.hidden_field :client_id, value:  current_client.id
+  = f.hidden_field :client_id, value: current_client.id
   = f.submit 'Изменить', class: 'btn btn-primary'

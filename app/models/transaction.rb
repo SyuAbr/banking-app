@@ -3,6 +3,8 @@ class Transaction < ApplicationRecord
 
   validates :amount, presence: true
   validates :transaction_type, presence: true
+
+
   scope :by_type, ->(type) { where(transaction_type: type) if type.present? }
   scope :by_min_amount, ->(min_amount) { where(amount: min_amount..) if min_amount.present? }
   scope :by_max_amount, ->(max_amount) { where(amount: ..max_amount) if max_amount.present? }

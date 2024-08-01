@@ -46,4 +46,4 @@
           = link_to 'Добавить операцию', new_bank_account_transaction_path(@bank_account), class: "btn btn-primary btn-lg px-4 mr-3", style: "background-color: blue"
           = link_to 'История операций', bank_account_transactions_path(@bank_account), class: "btn btn-lg px-4 ,ml-3", style: "background-color: white; color: blue; border-color: blue;"
       .text-center.mt-5
-        = link_to 'Назад к списку счетов', client_path(current_client), class: "btn btn-primary btn-lg px-4", style: "background-color: blue"
+        = link_to 'Назад к списку счетов', :back, class: "btn btn-primary btn-lg px-4", style: "background-color: blue"

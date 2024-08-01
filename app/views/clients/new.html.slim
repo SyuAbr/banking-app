@@ -2,7 +2,7 @@
   .px-4.pt-5.my-5.text-center.border-bottom
     h1.h3.mb-3.fw-normal
       | Регистрация
-    = form_with(model: @client, url: signup_path) do |form|
+    = form_with(model: @client, url: client_registration_path(@client)) do |form|
       - if @client.errors.any?
         - @client.errors.full_messages.each do |msg|
           .alert.alert-danger

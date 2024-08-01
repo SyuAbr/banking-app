@@ -5,59 +5,34 @@
         .card-body
           h2.mb-4
             | История операций:
-          = form_with url: bank_account_transactions_path(@bank_account), method: :get, local: true do |f|
-            .form-group
-              = f.label :type, 'Тип операции'
-              = f.select :type, options_for_select(['Все', 'Снятие', 'Получение', 'Перевод'], params[:type]), include_blank: true, class: 'form-control'
-            .form-group
-              = f.label :min_amount, 'Минимальная сумма'
-              = f.number_field :min_amount, value: params[:min_amount], class: 'form-control'
-            .form-group
-              = f.label :max_amount, 'Максимальная сумма'
-              = f.number_field :max_amount, value: params[:max_amount], class: 'form-control'
-            .form-group
-              = f.label :start_date, 'Дата начала'
-              = f.date_field :start_date, value: params[:start_date], class: 'form-control'
-            .form-group
-              = f.label :end_date, 'Дата окончания'
-              = f.date_field :end_date, value: params[:end_date], class: 'form-control'
-            = f.submit 'Фильтровать', class: 'btn btn-primary mt-2'
 
-      - if @transactions.any?
-        table.table
-          thead
-            tr
-              th
-                = link_to 'Сумма', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'amount', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))
-              th
-                = link_to 'Тип операции', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'transaction_type', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))
-              th
-                | Отправитель
-              th
-                | Получатель
-              th
-                = link_to 'Дата и время', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'created_at', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))
-          tbody
-            - @transactions.each do |transaction|
-              - decorated_transaction= transaction.decorate
-              tr
-                td
-                  = decorated_transaction.formatted_amount
-                td
-                  = decorated_transaction.object.transaction_type
-                td
-                  - sender_account = BankAccount.find_by(id: decorated_transaction.object.sender_id)
-                  = sender_account.present? ? sender_account.account_number : "N/A"
-                td
-                  - recipient_account = BankAccount.find_by(id: decorated_transaction.object.recipient_id)
-                  = recipient_account.present? ? recipient_account.account_number : "N/A"
-                td
-                  = decorated_transaction.formatted_date
-        = paginate @transactions
-      - else
-        p
-          | На этом счете еще не было операций.
+          - if @bank_account.present?
+            = turbo_frame_tag "filter" do
+              = render partial: "filter", locals: { bank_account: @bank_account }
 
-.text-center.mt-4
-  = link_to 'Вернуться к счету', :back, class: "btn btn-primary btn-lg px-4", style: "background-color: blue;"
+              - if @transactions.any?
+                = turbo_frame_tag "transactions" do
+                  table.table
+                    = render partial: "sort", locals: { bank_account: @bank_account }
+                    tbody
+                      - @transactions.each do |transaction|
+                        tr
+                          td
+                            = transaction.formatted_amount
+                          td
+                            = transaction.object.transaction_type
+                          td
+                            - sender_account = BankAccount.find_by(id: transaction.object.sender_id)
+                            = sender_account.present? ? sender_account.account_number : "N/A"
+                          td
+                            - recipient_account = BankAccount.find_by(id: transaction.object.recipient_id)
+                            = recipient_account.present? ? recipient_account.account_number : "N/A"
+                          td
+                            = transaction.formatted_date
+                  = paginate @transactions
+              - else
+                p
+                  | На этом счете еще не было операций.
 
+      .text-center.mt-4
+        = link_to 'Вернуться к счету', :back, class: "btn btn-primary btn-lg px-4", style: "background-color: blue;"

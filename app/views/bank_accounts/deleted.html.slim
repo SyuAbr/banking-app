@@ -1,11 +1,11 @@
 h1
   | Удаленные счета
-- if @deleted_bank_accounts
-  - @deleted_bank_accounts.each do |account|
-    .card.mb-3
-      .card-body
-        p.card-text
-        |  Номер счета:
+- @deleted_bank_accounts.each do |account|
+  .card.mb-3
+    .card-body
+
+      p.card-text
+        |  Номер счета: 
         = account.account_number
       p.card-text
         |  Тип счета: 

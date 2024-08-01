@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   confirmations: 'clients/confirmations'
   }
 
-  resources :password_resets, only: %i[new create edit update]
 
   get 'clients/:client_id/bank_accounts/:id/more', to: 'bank_accounts#more', as: 'more_client_bank_account'
   get '/clients/:client_id/bank_accounts/:id/destroy', to: 'bank_accounts#destroy', as: 'destroy_client_bank_account'

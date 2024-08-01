@@ -1,0 +1,14 @@
+= form_with url: bank_account_transactions_path(bank_account), method: :get, class: "mb-3" do |form|
+  .form-row
+    .form-group.col-md-3
+      = form.select :type, options_for_select(['Перевод', 'Снятие', 'Пополнение']), { prompt: 'Выберите тип' }, class: 'form-control'
+    .form-group.col-md-3
+      = form.text_field :min_amount, value: params[:min_amount], placeholder: 'Мин. сумма', class: 'form-control'
+    .form-group.col-md-3
+      = form.text_field :max_amount, value: params[:max_amount], placeholder: 'Макс. сумма', class: 'form-control'
+    .form-group.col-md-3
+      = form.text_field :start_date, value: params[:start_date], placeholder: 'Дата начала', class: 'form-control', type: 'date'
+    .form-group.col-md-3
+      = form.text_field :end_date, value: params[:end_date], placeholder: 'Дата окончания', class: 'form-control', type: 'date'
+    .form-group.col-md-12
+      = form.submit 'Применить фильтры', class: 'btn btn-primary btn-sm'

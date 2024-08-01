@@ -1,0 +1,17 @@
+= turbo_stream_from [account, current_client]
+.card.mb-3 id="#{dom_id(account)}"
+  .card-body
+    p.card-text
+      | Номер счета:
+      = account.account_number
+    p.card-text
+      | Тип счета:
+      = account.account_type
+    p.card-text
+      | Баланс:
+      = account.balance
+    hr
+    = link_to "Редактировать", edit_client_bank_account_path(client_id: current_client.id, id: account.id), class: "btn btn-primary px-3", style: "background-color: blue"
+    = link_to "Удалить", destroy_client_bank_account_path(client_id: current_client.id, id: account.id), data: { confirm: "Вы уверены?" }, class: "btn btn-primary px-3", style: "color: blue; background-color: white; border: 1px solid blue"
+    hr
+    = link_to "Подробнее о счёте", more_client_bank_account_path(client_id: current_client.id, id: account.id), class: "btn btn-primary  px-3", style: "background-color: blue"

@@ -1,0 +1,2 @@
+web: env RUBY_DEBUG_OPEN=true rails server
+js: yarn build --watch

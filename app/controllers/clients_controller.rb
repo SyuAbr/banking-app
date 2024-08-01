@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :authenticate_client!, except: %i[create index]
+
   def index; end
 
   def show
@@ -13,7 +14,7 @@ class ClientsController < ApplicationController
     else
       @client = Client.new(client_params)
       if @client.save
-        redirect_to client_path(current_client)
+        redirect_to client_path(@client)
       else
         render :new
       end
@@ -29,5 +30,4 @@ class ClientsController < ApplicationController
     reset_session
     redirect_to root_url
   end
-
 end

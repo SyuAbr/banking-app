@@ -1,0 +1,12 @@
+thead
+  tr
+    th
+      = link_to 'Сумма', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'amount', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))
+    th
+      = link_to 'Тип операции', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'transaction_type', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))
+    th
+      | Отправитель
+    th
+      | Получатель
+    th
+      = link_to 'Дата и время', bank_account_transactions_path(@bank_account, params.permit!.merge(sort_column: 'created_at', sort_direction: params[:sort_direction] == 'asc' ? 'desc' : 'asc'))

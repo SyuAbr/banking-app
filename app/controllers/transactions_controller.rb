@@ -1,5 +1,4 @@
 class TransactionsController < ApplicationController
-  before_action :authenticate_client!
   before_action :set_bank_account
   has_scope :by_type, as: 'type'
   has_scope :by_min_amount, as: 'min_amount'
@@ -9,7 +8,9 @@ class TransactionsController < ApplicationController
   has_scope :sorted_by, using: %i[sort_column sort_direction], default: %w[created_at desc], type: :hash
 
   def index
-    @transactions = apply_scopes(@bank_account.transactions).order("#{sort_column} #{sort_direction}").page(params[:page]).per(10)
+    transactions = apply_scopes(@bank_account.transactions).order("#{sort_column} #{sort_direction}")
+    decorated_transactions = TransactionDecorator.decorate_collection(transactions)
+    @transactions = Kaminari.paginate_array(decorated_transactions).page(params[:page]).per(10)
 
   end
 

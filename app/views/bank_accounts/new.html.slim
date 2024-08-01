@@ -1,6 +1,6 @@
 h1
   | Создать новый счет
-= form_for [current_client, BankAccount.new] do |f|
+= form_for [@client, BankAccount.new] do |f|
   .form-group
     = f.label 'Тип счета'
     = f.select :account_type, options_for_select(['Расчетный','Кредитный','Депозитный', 'Бюджетный']), {}, class: 'form-control'
